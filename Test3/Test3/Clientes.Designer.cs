@@ -37,18 +37,27 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.text_busqueda = new System.Windows.Forms.TextBox();
+            this.btn_busqueda = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtstatus = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.fechacover = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.fechanac = new System.Windows.Forms.DateTimePicker();
+            this.txtmontocovertura = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.txttel = new System.Windows.Forms.TextBox();
+            this.txtcodpaciente = new System.Windows.Forms.TextBox();
+            this.txtfullname = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Boton_modificar_TP0 = new System.Windows.Forms.Button();
+            this.fechacov = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.fechanaci = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,15 +67,6 @@
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.txtpaciente = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtmontocovertura = new System.Windows.Forms.TextBox();
-            this.txttel = new System.Windows.Forms.TextBox();
-            this.txtfullname = new System.Windows.Forms.TextBox();
-            this.txtcodpaciente = new System.Windows.Forms.TextBox();
-            this.txtstatus = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -143,8 +143,8 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.text_busqueda);
+            this.tabPage2.Controls.Add(this.btn_busqueda);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -157,34 +157,34 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 24);
+            this.label6.Location = new System.Drawing.Point(21, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
+            this.label6.Size = new System.Drawing.Size(97, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "NIT CLIENTE";
+            this.label6.Text = "CODIGO CLIENTE";
             // 
-            // textBox3
+            // text_busqueda
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 17);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 20);
-            this.textBox3.TabIndex = 2;
+            this.text_busqueda.Location = new System.Drawing.Point(131, 17);
+            this.text_busqueda.Name = "text_busqueda";
+            this.text_busqueda.Size = new System.Drawing.Size(210, 20);
+            this.text_busqueda.TabIndex = 2;
             // 
-            // button2
+            // btn_busqueda
             // 
-            this.button2.Location = new System.Drawing.Point(325, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Busqueda";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_busqueda.Location = new System.Drawing.Point(359, 14);
+            this.btn_busqueda.Name = "btn_busqueda";
+            this.btn_busqueda.Size = new System.Drawing.Size(75, 23);
+            this.btn_busqueda.TabIndex = 1;
+            this.btn_busqueda.Text = "Busqueda";
+            this.btn_busqueda.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 67);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(457, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(713, 210);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage1
@@ -192,9 +192,9 @@
             this.tabPage1.Controls.Add(this.txtstatus);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
+            this.tabPage1.Controls.Add(this.fechacover);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.fechanac);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.label2);
@@ -215,20 +215,100 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // dateTimePicker1
+            // txtstatus
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(133, 98);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.txtstatus.Location = new System.Drawing.Point(177, 210);
+            this.txtstatus.Name = "txtstatus";
+            this.txtstatus.Size = new System.Drawing.Size(100, 20);
+            this.txtstatus.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 210);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(42, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Estatus";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(332, 247);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 30;
+            this.button6.Text = "Nuevo";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // fechacover
+            // 
+            this.fechacover.Location = new System.Drawing.Point(133, 159);
+            this.fechacover.Name = "fechacover";
+            this.fechacover.Size = new System.Drawing.Size(200, 20);
+            this.fechacover.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 158);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Fecha Inicio Covertura";
+            // 
+            // fechanac
+            // 
+            this.fechanac.Location = new System.Drawing.Point(133, 98);
+            this.fechanac.Name = "fechanac";
+            this.fechanac.Size = new System.Drawing.Size(200, 20);
+            this.fechanac.TabIndex = 13;
+            // 
+            // txtmontocovertura
+            // 
+            this.txtmontocovertura.Location = new System.Drawing.Point(177, 184);
+            this.txtmontocovertura.Name = "txtmontocovertura";
+            this.txtmontocovertura.Size = new System.Drawing.Size(100, 20);
+            this.txtmontocovertura.TabIndex = 9;
+            this.txtmontocovertura.TextChanged += new System.EventHandler(this.txtmontocovertura_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Monto de covertura";
+            // 
+            // txttel
+            // 
+            this.txttel.Location = new System.Drawing.Point(177, 124);
+            this.txttel.Name = "txttel";
+            this.txttel.Size = new System.Drawing.Size(100, 20);
+            this.txttel.TabIndex = 8;
+            // 
+            // txtcodpaciente
+            // 
+            this.txtcodpaciente.Location = new System.Drawing.Point(177, 43);
+            this.txtcodpaciente.Name = "txtcodpaciente";
+            this.txtcodpaciente.Size = new System.Drawing.Size(100, 20);
+            this.txtcodpaciente.TabIndex = 5;
+            // 
+            // txtfullname
+            // 
+            this.txtfullname.Location = new System.Drawing.Point(177, 71);
+            this.txtfullname.Name = "txtfullname";
+            this.txtfullname.Size = new System.Drawing.Size(100, 20);
+            this.txtfullname.TabIndex = 6;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.dateTimePicker3);
+            this.tabPage3.Controls.Add(this.Boton_modificar_TP0);
+            this.tabPage3.Controls.Add(this.fechacov);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.dateTimePicker4);
+            this.tabPage3.Controls.Add(this.fechanaci);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.label11);
@@ -246,37 +326,31 @@
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // dateTimePicker2
+            // button5
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(133, 159);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 15;
+            this.button5.Location = new System.Drawing.Point(316, 229);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Nuevo";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label8
+            // Boton_modificar_TP0
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Fecha Inicio Covertura";
+            this.Boton_modificar_TP0.Location = new System.Drawing.Point(207, 229);
+            this.Boton_modificar_TP0.Name = "Boton_modificar_TP0";
+            this.Boton_modificar_TP0.Size = new System.Drawing.Size(75, 23);
+            this.Boton_modificar_TP0.TabIndex = 28;
+            this.Boton_modificar_TP0.Text = "Modificar";
+            this.Boton_modificar_TP0.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // fechacov
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Monto de covertura";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(151, 143);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 27;
+            this.fechacov.Location = new System.Drawing.Point(151, 143);
+            this.fechacov.Name = "fechacov";
+            this.fechacov.Size = new System.Drawing.Size(200, 20);
+            this.fechacov.TabIndex = 27;
             // 
             // label7
             // 
@@ -287,12 +361,12 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Fecha Inicio Covertura";
             // 
-            // dateTimePicker4
+            // fechanaci
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(151, 82);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker4.TabIndex = 25;
+            this.fechanaci.Location = new System.Drawing.Point(151, 82);
+            this.fechanaci.Name = "fechanaci";
+            this.fechanaci.Size = new System.Drawing.Size(200, 20);
+            this.fechanaci.TabIndex = 25;
             // 
             // label9
             // 
@@ -352,6 +426,7 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 23;
+            this.txttelefono.TextChanged += new System.EventHandler(this.txttelefono_TextChanged);
             // 
             // txtpaciente
             // 
@@ -366,79 +441,6 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
             this.txtnombre.TabIndex = 22;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(207, 229);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(316, 229);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Nuevo";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(332, 247);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Nuevo";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // txtmontocovertura
-            // 
-            this.txtmontocovertura.Location = new System.Drawing.Point(177, 184);
-            this.txtmontocovertura.Name = "txtmontocovertura";
-            this.txtmontocovertura.Size = new System.Drawing.Size(100, 20);
-            this.txtmontocovertura.TabIndex = 9;
-            // 
-            // txttel
-            // 
-            this.txttel.Location = new System.Drawing.Point(177, 124);
-            this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(100, 20);
-            this.txttel.TabIndex = 8;
-            // 
-            // txtfullname
-            // 
-            this.txtfullname.Location = new System.Drawing.Point(177, 71);
-            this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(100, 20);
-            this.txtfullname.TabIndex = 6;
-            // 
-            // txtcodpaciente
-            // 
-            this.txtcodpaciente.Location = new System.Drawing.Point(177, 43);
-            this.txtcodpaciente.Name = "txtcodpaciente";
-            this.txtcodpaciente.Size = new System.Drawing.Size(100, 20);
-            this.txtcodpaciente.TabIndex = 5;
-            // 
-            // txtstatus
-            // 
-            this.txtstatus.Location = new System.Drawing.Point(177, 210);
-            this.txtstatus.Name = "txtstatus";
-            this.txtstatus.Size = new System.Drawing.Size(100, 20);
-            this.txtstatus.TabIndex = 32;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 210);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Estatus";
             // 
             // Clientes
             // 
@@ -474,19 +476,19 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox text_busqueda;
+        private System.Windows.Forms.Button btn_busqueda;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechanac;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker fechacover;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Button Boton_modificar_TP0;
+        private System.Windows.Forms.DateTimePicker fechacov;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker fechanaci;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

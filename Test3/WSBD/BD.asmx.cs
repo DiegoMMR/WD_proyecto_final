@@ -24,13 +24,13 @@ namespace WSBD
         {
             return "Hello World";
         }
-        //**************************************Conexiona DB************************************************************
+        //**************************************Conexiona a la DB************************************************************
 
         SqlConnection conn = new SqlConnection("Data Source=FOXHOUND; Initial Catalog=DBWS; Integrated Security=True;");
 
-        //****************************************Carga de Datagridsiews*************************************************
+        //****************************************Carga de informacion en los Datagridsiews*************************************************
         [WebMethod]
-        public DataTable LoadData(string query, string[] parameter, object[] values, string table)
+        public DataTable CargarData(string query, string[] parameter, object[] values, string table)
         {
             conn.Open();
             var cmd = new SqlCommand(query, conn);
@@ -45,9 +45,9 @@ namespace WSBD
             return dt;
         }
 
-        //************************************************Afiliados******************************************************
+        //************************************************Pacientes/Clientes/Afiliados/**************************************
         [WebMethod]
-        public void ADDAfiliado(int CodPaciente, string Nombre, string FechaNac, int Telefono, string Fechacover, float Monto, string Status)
+        public void AgregarPaciente(int CodPaciente, string Nombre, string FechaNac, int Telefono, string Fechacover, float Monto, string Status)
         {
 
             conn.Open();
@@ -60,7 +60,7 @@ namespace WSBD
         }
 
         [WebMethod]
-        public void DELAfiliado(int CodPaciente)
+        public void BorrarPaciente(int CodPaciente)
         {
 
             conn.Open();
@@ -73,7 +73,7 @@ namespace WSBD
         }
 
         [WebMethod]
-        public void Actualiza_Afiliado(int CodPaciente, string Nombre, string FechaNac, int Telefono, string Fechacover, float Monto, string Status)
+        public void ActualizaPaciente(int CodPaciente, string Nombre, string FechaNac, int Telefono, string Fechacover, float Monto, string Status)
         {
 
             conn.Open();
@@ -81,6 +81,59 @@ namespace WSBD
             cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = string.Format("UPDATE [dbo].[Cleintes] SET [CodPaciente] = " + CodPaciente + " ,[Nombre] = '" + Nombre + "',[FechaNac] ='" + FechaNac + "' ,[Telefono] = '" + Telefono + "',[Fechacover] = '" + Fechacover + "',[Monto] =" + Monto + ",[Status] = '" + Status + "' WHERE [CodPaciente] = " + CodPaciente + "");
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        //**********************************Proveedores/Suppliers********************************************************
+        [WebMethod]
+        public void AgregarProv(int NIT, string Razonsocial)
+        {
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = string.Format("INSERT INTO [dbo].[Proveedor] ([NIT],[Razonsocial]) VALUES(" + NIT + ",'" + Razonsocial + "')");
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        [WebMethod]
+        public void BorrarProv(string NIT)
+        {
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = string.Format("DELETE FROM [dbo].[Proveedor] WHERE NIT = " + NIT + "");
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        [WebMethod]
+        public void ActualizarProv(int NIT, string Razonsocial)
+        {
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = string.Format("UPDATE [dbo].[Proveedor] SET [NIT] = " + NIT + ",[Razonsocial] = '" + Razonsocial + "' WHERE NIT = " + NIT + "");
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        //************************************************Prima**************************************
+        [WebMethod]
+        public void AgregarPrim(int NoBoleta, string Fechapagar, int CodPaciente)
+        {
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = string.Format("INSERT INTO [dbo].[Primas] ([NoBoleta],[Fechapagar],[CodPaciente]) VALUES(" + NoBoleta + ",'" + Fechapagar + "'," + CodPaciente + ")");
             cmd.ExecuteNonQuery();
             conn.Close();
         }

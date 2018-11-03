@@ -4,10 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3", "Test3\Test3.csproj", "{F448686E-4966-4552-BA55-CF6ED33E896C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B6FEC51A-3072-4E99-A47F-8CDDC2977E30} = {B6FEC51A-3072-4E99-A47F-8CDDC2977E30}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSBD", "WSBD\WSBD.csproj", "{B6FEC51A-3072-4E99-A47F-8CDDC2977E30}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{E95919A5-E96E-4548-ADED-EABF374059F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +24,6 @@ Global
 		{B6FEC51A-3072-4E99-A47F-8CDDC2977E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6FEC51A-3072-4E99-A47F-8CDDC2977E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6FEC51A-3072-4E99-A47F-8CDDC2977E30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E95919A5-E96E-4548-ADED-EABF374059F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E95919A5-E96E-4548-ADED-EABF374059F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E95919A5-E96E-4548-ADED-EABF374059F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E95919A5-E96E-4548-ADED-EABF374059F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

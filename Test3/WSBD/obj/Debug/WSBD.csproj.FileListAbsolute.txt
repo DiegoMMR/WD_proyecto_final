@@ -53,3 +53,4 @@ C:\Users\User\Documents\Visual Studio 2017\projects\Test3\WSBD\obj\Debug\WSBD.cs
 C:\Users\User\Documents\Visual Studio 2017\projects\Test3\WSBD\obj\Debug\WSBD.csproj.CopyComplete
 C:\Users\User\Documents\Visual Studio 2017\projects\Test3\WSBD\obj\Debug\WSBD.dll
 C:\Users\User\Documents\Visual Studio 2017\projects\Test3\WSBD\obj\Debug\WSBD.pdb
+C:\Users\User\Documents\Visual Studio 2017\projects\Test3\WSBD\obj\Debug\WSBD.csprojAssemblyReference.cache

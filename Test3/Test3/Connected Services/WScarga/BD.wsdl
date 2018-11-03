@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameter" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="values" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CargarDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodPaciente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaNac" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Telefono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fechacover" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarPacienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrarPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodPaciente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarPacienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ActualizaPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodPaciente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaNac" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Telefono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fechacover" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaPacienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AgregarProv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NIT" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Razonsocial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarProvResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrarProv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NIT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarProvResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ActualizarProv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NIT" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Razonsocial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarProvResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarData" />
+  </wsdl:message>
+  <wsdl:message name="CargarDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarPaciente" />
+  </wsdl:message>
+  <wsdl:message name="AgregarPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarPaciente" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaPaciente" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProvSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarProv" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProvSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarProvResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProvSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarProv" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProvSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarProvResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarProvSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarProv" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarProvSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarProvResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BDSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarData">
+      <wsdl:input message="tns:CargarDataSoapIn" />
+      <wsdl:output message="tns:CargarDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPaciente">
+      <wsdl:input message="tns:AgregarPacienteSoapIn" />
+      <wsdl:output message="tns:AgregarPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPaciente">
+      <wsdl:input message="tns:BorrarPacienteSoapIn" />
+      <wsdl:output message="tns:BorrarPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPaciente">
+      <wsdl:input message="tns:ActualizaPacienteSoapIn" />
+      <wsdl:output message="tns:ActualizaPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProv">
+      <wsdl:input message="tns:AgregarProvSoapIn" />
+      <wsdl:output message="tns:AgregarProvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProv">
+      <wsdl:input message="tns:BorrarProvSoapIn" />
+      <wsdl:output message="tns:BorrarProvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProv">
+      <wsdl:input message="tns:ActualizarProvSoapIn" />
+      <wsdl:output message="tns:ActualizarProvSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BDSoap" type="tns:BDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarData">
+      <soap:operation soapAction="http://tempuri.org/CargarData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPaciente">
+      <soap:operation soapAction="http://tempuri.org/AgregarPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPaciente">
+      <soap:operation soapAction="http://tempuri.org/BorrarPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPaciente">
+      <soap:operation soapAction="http://tempuri.org/ActualizaPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProv">
+      <soap:operation soapAction="http://tempuri.org/AgregarProv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProv">
+      <soap:operation soapAction="http://tempuri.org/BorrarProv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProv">
+      <soap:operation soapAction="http://tempuri.org/ActualizarProv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BDSoap12" type="tns:BDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarData">
+      <soap12:operation soapAction="http://tempuri.org/CargarData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPaciente">
+      <soap12:operation soapAction="http://tempuri.org/AgregarPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPaciente">
+      <soap12:operation soapAction="http://tempuri.org/BorrarPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPaciente">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProv">
+      <soap12:operation soapAction="http://tempuri.org/AgregarProv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProv">
+      <soap12:operation soapAction="http://tempuri.org/BorrarProv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProv">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarProv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BD">
+    <wsdl:port name="BDSoap" binding="tns:BDSoap">
+      <soap:address location="http://localhost:57780/BD.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BDSoap12" binding="tns:BDSoap12">
+      <soap12:address location="http://localhost:57780/BD.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
