@@ -1,3 +1,5 @@
+
+*.lock
 /proyecto final java/nbproject/private/
 /proyecto final java/proyecto final java-war/nbproject/private/
 /proyecto final java/proyecto final java-ejb/nbproject/private/

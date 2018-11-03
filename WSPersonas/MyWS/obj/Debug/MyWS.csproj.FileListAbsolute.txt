@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\bin\MyWS.dll.config
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\bin\MyWS.dll
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\bin\MyWS.pdb
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\obj\Debug\MyWS.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\obj\Debug\MyWS.dll
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\obj\Debug\MyWS.pdb
+C:\Users\User\Documents\GitHub\WD_proyecto_final\WSPersonas\MyWS\obj\Debug\MyWS.csprojAssemblyReference.cache
