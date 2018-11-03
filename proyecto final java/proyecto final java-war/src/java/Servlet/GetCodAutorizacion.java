@@ -6,8 +6,10 @@
 package Servlet;
 
 import beans.IEJBAutorizar;
+import conexion.ConexionBD;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -123,6 +125,17 @@ public class GetCodAutorizacion extends HttpServlet {
         System.out.println(
                 res.get("USD")
             );
+        
+        
+        
+        try {
+            ConexionBD conexionBD;
+            conexionBD = new ConexionBD();
+            conexionBD.insertHistorial(CodigoHospital, CodigoCliente);
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(GetCodAutorizacion.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
         
